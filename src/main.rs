@@ -1,16 +1,9 @@
-const L: i32 = 10;
+use uuid::otto::Manager;
 
-fn deduct(a: &mut i32) -> () {
-    *a = *a - 1;
-    println!("{}", a);
-}
+mod uuid;
 
 fn main() {
-    let mut n: i32 = L;
+    let a = Manager::new();
 
-    deduct(&mut n);
-
-   println!("{}", n);
-    
-    println!("Hello, world!");
+    println!("{}", a.get_nill());
 }
